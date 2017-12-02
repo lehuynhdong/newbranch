@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Location</string>
+    <string name="api_key">AIzaSyCYEjSf1L415Nr6ip-JfbncTe_efdf3xC0</string>
+    <string name="text_categories_coffee">Highlands Coffee, Trung Nguyên, Starbucks, The Coffee House, Passio, Urban Station, Phúc Long Coffee, Tea House, Effoc</string>
+    <string name="text_categories_restaurant">McDonald’s, Lotteria, Gà rán KFC, Gà Rán Carl’s Jr.Hamburger, Gà Rán Popeyes, Gà Rán Papa’s Chicken, Two Two Fried Chicken</string>
+    <string name="text_categories_cinema">CGV, Lotte Cinema, Platinum Cineplex, Galaxy Cinema, BHD Star Cineplex, CineStar, Mega GS, DDC, Cinebox, Flamingo Cinema Club</string>
+    <string name="text_categories_atm">VietinBank, BIDV, VPBank, Sacombank, ACB, TPBank, VCB, PVcom Bank, HDBank, Nam A Bank, KienLongBank, Techcombank, ABBANK, DAF</string>
+    <string name="text_no_data">No Database</string>
+    <string name="text_retrieve_data">Get Database &#8230;</string>
+    <string name="text_map">Gần tôi</string>
+    <string name="text_open">MỞ CỬA : </string>
+    <string name="hint_fill_in_place_name">Fill in place name </string>
+    <string name="hint_fill_in_place_time">Fill in place time </string>
+    <string name="hint_fill_in_place_address">Fill in place address </string>
+    <string name="hint_fill_in_place_price">Fill in place price </string>
+    <string name="hint_fill_in_place_description">Fill in place description </string>
+    <string name="text_save">SAVE</string>
+    <string name="text_warning_want_to_do">Do you want to delete </string>
+    <string name="text_deleting">Deleting &#8230;</string>
+    <string name="text_saving">Saving &#8230;</string>
+    <string name="text_warning">Warning</string>
+    <string name="text_yes">Yes</string>
+    <string name="text_no">No</string>
+    <string name="text_browse_image">Browse Image</string>
+    <string name="text_upload_image">Upload</string>
+
+</resources>

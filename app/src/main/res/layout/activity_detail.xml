@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.dongle.location.Activity.DetailActivity">
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorGrey">
+
+        <ImageView
+            android:id="@+id/imgViewDetail_Place"
+            android:layout_width="250dp"
+            android:layout_height="150dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/bg_2" />
+
+        <ImageButton
+            android:id="@+id/btnDetail_Del"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="40dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/map_detail"
+            app:srcCompat="@android:drawable/ic_input_delete" />
+
+        <ImageButton
+            android:id="@+id/btnDetail_Edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="40dp"
+            app:layout_constraintEnd_toStartOf="@+id/btnDetail_Description"
+            app:layout_constraintStart_toEndOf="@+id/btnDetail_Del"
+            app:layout_constraintTop_toBottomOf="@+id/map_detail"
+            app:srcCompat="@android:drawable/ic_menu_edit" />
+
+        <ImageButton
+            android:id="@+id/btnDetail_Description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:layout_marginTop="40dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/map_detail"
+            app:srcCompat="@android:drawable/ic_menu_directions" />
+
+        <TextView
+            android:id="@+id/txtDetail_Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:inputType="none"
+            android:text="EditDetail_Name"
+            android:textColor="@color/colorBlack"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgViewDetail_Place" />
+
+        <TextView
+            android:id="@+id/txtDetail_Time1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="28dp"
+            android:text="@string/text_open"
+            android:textSize="15sp"
+            android:textStyle="italic"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtDetail_Name" />
+
+        <TextView
+            android:id="@+id/txtDetail_Time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="28dp"
+
+            android:inputType="none"
+            android:text="EditDetail_Time"
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@+id/txtDetail_Time1"
+            app:layout_constraintTop_toBottomOf="@+id/txtDetail_Name" />
+
+        <TextView
+            android:id="@+id/txtDetail_Address"
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+
+            android:layout_marginTop="20dp"
+            android:inputType="none"
+            android:text="EditDetail_Address"
+            app:layout_constraintStart_toEndOf="@+id/imgDetail_Address"
+            app:layout_constraintTop_toBottomOf="@+id/txtDetail_Time" />
+
+        <TextView
+            android:id="@+id/txtDetail_Price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:inputType="none"
+            android:text="EditDetail_Price"
+            android:textColor="@color/colorGreen"
+            app:layout_constraintStart_toEndOf="@+id/imgDetail_Price"
+            app:layout_constraintTop_toBottomOf="@+id/txtDetail_Address" />
+
+        <TextView
+            android:id="@+id/txtDetail_Description"
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="28dp"
+            android:inputType="none"
+            android:text="EditDetail_Description"
+            app:layout_constraintStart_toEndOf="@+id/imgDetail_Description"
+            app:layout_constraintTop_toBottomOf="@+id/txtDetail_Price" />
+
+        <ImageView
+            android:id="@+id/imgDetail_Address"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtDetail_Time1"
+            app:srcCompat="@drawable/place_detail" />
+
+        <ImageView
+            android:id="@+id/imgDetail_Price"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="32dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgDetail_Address"
+            app:srcCompat="@drawable/price_detail" />
+
+        <ImageView
+            android:id="@+id/imgDetail_Description"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="32dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgDetail_Price"
+            app:srcCompat="@drawable/description_detail" />
+
+        <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/map_detail"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtDetail_Description"
+            tools:context="com.example.dongle.location.Activity.MapActivity" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</ScrollView>
