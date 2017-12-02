@@ -1,9 +1,11 @@
 package com.example.dongle.location.Activity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Window;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
@@ -14,7 +16,7 @@ import com.example.dongle.location.R;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class SflashActivity extends AppCompatActivity implements Animation.AnimationListener{
+public class SflashActivity extends Activity implements Animation.AnimationListener{
     @BindView(R.id.layotFlash)
     RelativeLayout layout;
     @BindView(R.id.imgFlash)
@@ -23,6 +25,7 @@ public class SflashActivity extends AppCompatActivity implements Animation.Anima
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_sflash);
         ButterKnife.bind(this);
 

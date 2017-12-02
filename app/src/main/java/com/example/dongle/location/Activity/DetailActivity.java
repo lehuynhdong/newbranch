@@ -5,6 +5,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -15,6 +16,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.Toolbar;
 
 import com.example.dongle.location.Database.Model.Place;
 import com.example.dongle.location.Database.PlaceRepo;
@@ -26,7 +28,10 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptor;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 import java.util.UUID;
@@ -56,7 +61,6 @@ public class DetailActivity extends AppCompatActivity implements
     private PlaceRepo placeRepo;
     private ProgressDialog progressDialog;
     private Place place;
-
     private GoogleMap googleMapDetail;
     private GoogleApiClient googleApiClient;
     private LocationRequest locationRequest;
@@ -79,6 +83,7 @@ public class DetailActivity extends AppCompatActivity implements
 //        Log.d("TEST", placeID + " " + categoryID);
         initprogressDialog();
         setPlace();
+        setTitle(place.getPlaceName());
 
     }
 
@@ -147,7 +152,7 @@ public class DetailActivity extends AppCompatActivity implements
         alerDialog.setPositiveButton(getResources().getString(R.string.text_yes), new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                Toast.makeText(DetailActivity.this, "Yes", Toast.LENGTH_SHORT).show();
+                placeRepo.delete(placeID);
             }
         });
 
@@ -195,13 +200,16 @@ public class DetailActivity extends AppCompatActivity implements
             @Override
             public void run() {
                     LatLng placeLocation = new LatLng(place.getPlaceLat(),place.getPlaceLng());
-                    googleMapDetail.addMarker(new MarkerOptions().position(placeLocation)
-                            .title(place.getPlaceName()));
-                    googleMapDetail.moveCamera(CameraUpdateFactory.newLatLngZoom(placeLocation,15));
+                    Marker markerdetail = googleMapDetail.addMarker(new MarkerOptions().position(placeLocation)
+                                                            .title(place.getPlaceName())
+                                                            .snippet(place.getPlaceAddress())
+                                                            );
+                                        googleMapDetail.moveCamera(CameraUpdateFactory.newLatLngZoom(placeLocation,15));
+                    markerdetail.showInfoWindow();
+
                 progressDialog.dismiss();
 
             }
         },3000);
-
     }
 }

@@ -7,6 +7,7 @@
     android:orientation="vertical"
     android:weightSum="8"
     tools:context="com.example.dongle.location.Activity.CategoriesActivity">
+
     <android.support.constraint.ConstraintLayout
         android:id="@+id/layoutCategories_coffee"
         android:layout_width="match_parent"

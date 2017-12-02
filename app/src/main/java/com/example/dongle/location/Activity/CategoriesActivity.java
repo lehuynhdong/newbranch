@@ -43,6 +43,7 @@ public class CategoriesActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_categories);
+        setTitle("Categories");
         ButterKnife.bind(this);
         init();
     }
@@ -55,6 +56,8 @@ public class CategoriesActivity extends AppCompatActivity {
         placesActIntent.putExtra(ActivityUtils.CATEGORY_KEY_PUT_EXTRA, categoryID);
         startActivity(placesActIntent);
     }
+
+
 
 
     @OnClick(R.id.layoutCategories_coffee)
